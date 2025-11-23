@@ -74,7 +74,7 @@ Assista ao vídeo explicando a proposta tecnológica, o público-alvo e os probl
 
 ## Video demonstrativo
 Assista ao vídeo para a demonstração e teste da API na prática:  
-[Demonstração da API](https://youtu.be/bsGvr91GXyc)
+[Demonstração da API](https://youtu.be/4lUS9TB6UOM)
 
 ## Endpoints da API
 
