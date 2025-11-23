@@ -66,6 +66,8 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 A documentação dos endpoints está disponível via **Swagger UI**:  
 `http://localhost:8080/swagger-ui/index.html`
 
+Além disso, disponibilizamos no repositório uma **collection do Insomnia** contendo todas as requisições da API prontas para uso, facilitando os testes e a integração durante o desenvolvimento.
+
 ## Apresentação
 Assista ao vídeo explicando a proposta tecnológica, o público-alvo e os problemas que a aplicação resolve:  
 [Apresentação SolarMetrics](https://youtu.be/Fcza8JBvsyw)
