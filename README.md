@@ -92,6 +92,27 @@ A API foi documentada com **Swagger / OpenAPI**, oferecendo exemplos completos d
 
 > Para todos os endpoints, exemplos detalhados de request e response estão disponíveis no **Swagger UI** e **Collection para o Insomnia** presente aqui no repositório.
 
+## Deploy em Nuvem (Docker)
+
+O repositório já inclui um **Dockerfile** configurado para construir e
+executar a aplicação em um ambiente conteinerizado. Isso facilita o
+deploy em serviços de nuvem como **Azure**, **AWS**, **Google Cloud**,
+**Oracle Cloud** ou qualquer plataforma que suporte Docker.
+
+### 📦 Gerando a imagem Docker
+
+No diretório raiz do projeto, execute:
+
+``` bash
+docker build -t lince-api .
+```
+
+### ▶️ Executando o container
+
+``` bash
+docker run -p 8080:8080 lince-api
+```
+
 ## Tecnologias utilizadas
 - Java 21  
 - Spring Boot 3.x  
