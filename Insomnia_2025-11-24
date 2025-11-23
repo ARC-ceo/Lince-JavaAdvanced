@@ -1,0 +1,1310 @@
+type: collection.insomnia.rest/5.0
+name: GS LC Java
+meta:
+  id: wrk_29ef272609684924906d11c30f4dddcf
+  created: 1763924284265
+  modified: 1763924284265
+collection:
+  - name: Supervisor
+    meta:
+      id: fld_7ef91695feb645dd95c3f88eb3718bca
+      created: 1763641719083
+      modified: 1763921958665
+      sortKey: -1762117631105.5
+    children:
+      - url: http://localhost:8080/supervisor
+        name: Create
+        meta:
+          id: req_0080382568bb453cbf3c87dce88dc304
+          created: 1763641719084
+          modified: 1763921954592
+          isPrivate: false
+          sortKey: -1759000027455
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "arthur@gmail.com",
+            	"nome": "Arthur Ribeiro",
+            	"telefone": "11972935394",
+            	"senha": "senha123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/supervisor
+        name: Update
+        meta:
+          id: req_b3a24f038ab441c7b5f5e796c1f3a83e
+          created: 1763641719085
+          modified: 1763928147664
+          isPrivate: false
+          sortKey: -1759000026955
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": "26f90caf-ea5c-417f-be94-7b85e3b96bc3",
+            	"email": "arthur@gmail.com",
+            	"nome": "Carlos Clementino",
+            	"telefone": "11972935394"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/supervisor/26f90caf-ea5c-417f-be94-7b85e3b96bc3
+        name: Get
+        meta:
+          id: req_b8cc068e61b24f9fb2e0a8ac346c48b2
+          created: 1763641719085
+          modified: 1763928128689
+          isPrivate: false
+          sortKey: -1759000027055
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/supervisor/26f90caf-ea5c-417f-be94-7b85e3b96bc3
+        name: Delete
+        meta:
+          id: req_7793ba48aa3e4bf7b6a71aeed12081cf
+          created: 1763641719086
+          modified: 1763928842588
+          isPrivate: false
+          sortKey: -1759000027155
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/supervisor/26f90caf-ea5c-417f-be94-7b85e3b96bc3
+        name: Patch
+        meta:
+          id: req_9f37176a7383464cabb035baa241806d
+          created: 1763641719087
+          modified: 1763928112944
+          isPrivate: false
+          sortKey: -1759000027255
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Carlos Santiago"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_7b6ecb0013c84d618ecc71b12dfb976a
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_ca72aae4c2c84f3faef7dd56708511a7
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_b5bf93c8ab0a4eb89349c53d78c4d3d3
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/supervisor
+        name: Get All
+        meta:
+          id: req_7eff1a71c69b42f0bf964472f3c04d92
+          created: 1763641719088
+          modified: 1763928037884
+          isPrivate: false
+          sortKey: -1759000027355
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_53ffd419585946a293ba63e256d55fa3
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_f7f3418b1117471ca006a3f8fe7a8e02
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Equipe
+    meta:
+      id: fld_aa109de8c19d4cc6ac01dff7bc359cc1
+      created: 1763641719089
+      modified: 1763679811746
+      sortKey: -1760507930928
+    children:
+      - url: http://localhost:8080/equipe/3dee999f-fae0-47a2-86d2-628bb93b6870
+        name: Patch
+        meta:
+          id: req_4fb2164bc90a442ea480fc054b7ddd23
+          created: 1763641719090
+          modified: 1763928211721
+          isPrivate: false
+          sortKey: -1762726112088
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "descricao": "Equipe responsável pela construção de estruturas. atualizado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/equipe
+        name: Get all
+        meta:
+          id: req_0ee656179d7f4d26b5a7183739321b33
+          created: 1763641719091
+          modified: 1763924079100
+          isPrivate: false
+          sortKey: -1762726157261
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/equipe/3dee999f-fae0-47a2-86d2-628bb93b6870
+        name: Get ID Equipe
+        meta:
+          id: req_85d00af04ad34cdabb55be73cadc3753
+          created: 1763641719091
+          modified: 1763928200649
+          isPrivate: false
+          sortKey: -1762726243945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/equipe
+        name: Update
+        meta:
+          id: req_ea1c5e5212914d22aa6c0764ddc5d7ab
+          created: 1763641719093
+          modified: 1763928188476
+          isPrivate: false
+          sortKey: -1762726293941
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "3dee999f-fae0-47a2-86d2-628bb93b6870",
+              "nome": "Equipe Alvenaria",
+              "descricao": "Equipe responsável pela construção de estruturas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/equipe
+        name: Create
+        meta:
+          id: req_8124c1e6977b4658a36ae61c988bca33
+          created: 1763641719094
+          modified: 1763924062425
+          isPrivate: false
+          sortKey: -1762726323042
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Equipe Elétrica",
+              "descricao": "Equipe reponsável pelas instalações elétricas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/equipe/3dee999f-fae0-47a2-86d2-628bb93b6870
+        name: Delete
+        meta:
+          id: req_93db9a0e06454dc3adf4b329597ccd0d
+          created: 1763641719095
+          modified: 1763928823279
+          isPrivate: false
+          sortKey: -1762726334744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Operadores
+    meta:
+      id: fld_370c833251384fb2b3a0a99706a37387
+      created: 1763727355827
+      modified: 1763727355827
+      sortKey: -1759796606634.5
+    children:
+      - url: http://localhost:8080/operador/0bd8fd0b-731f-40d7-a44b-83c4f4f905f3
+        name: Patch
+        meta:
+          id: req_07bf03b06ea24a73a51a0cb35bf6be69
+          created: 1763727355828
+          modified: 1763928362665
+          isPrivate: false
+          sortKey: -1762726112088
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Carlos Santiago"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_0dd6380e9dff4abebf036e537aec6137
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_b8735e7fa59347bbaf32489b0920fc69
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_a49e25affc284ce29f69c3b4e7e7a991
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador/0bd8fd0b-731f-40d7-a44b-83c4f4f905f3
+        name: Get ID Operador
+        meta:
+          id: req_b92a76a20b074c8ca0b0d3f54aab26c8
+          created: 1763727355829
+          modified: 1763928349480
+          isPrivate: false
+          sortKey: -1762726243945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_5c90387a40aa409e891795217faf8e88
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_6936016e32b340869e2b2e8c347595e7
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador
+        name: Get all
+        meta:
+          id: req_0b6ef7ccc4794552bb526acdd94421fe
+          created: 1763727355830
+          modified: 1763927184508
+          isPrivate: false
+          sortKey: -1762726202434
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_a7a1215266f640b2af7dc61735434876
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_8cb1e8c498964990bff2888e4b4151da
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador
+        name: Update
+        meta:
+          id: req_d6f328c170534db59ed3818b0885b5ec
+          created: 1763727355831
+          modified: 1763928328595
+          isPrivate: false
+          sortKey: -1762726293941
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "0bd8fd0b-731f-40d7-a44b-83c4f4f905f3",
+              "nome": "Roberto Souza Santos",
+              "funcao": "Fazer quebra-galhos",
+            	"equipeId": "3dee999f-fae0-47a2-86d2-628bb93b6870"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_0de8f23b3dda485e954e7dd60b834f49
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_3c6ea38dc37f488a8228b4e48ed51dd6
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_38c411e6c4074366b8a57826bae069e9
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador
+        name: Create
+        meta:
+          id: req_437224d4ed4f46db87fa5a186c783664
+          created: 1763727355832
+          modified: 1763928306321
+          isPrivate: false
+          sortKey: -1762726323042
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Carlos Souza",
+              "funcao": "Fazer quebra-galhos",
+            	"equipeId": "3dee999f-fae0-47a2-86d2-628bb93b6870"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+            id: pair_4d9ef8036ce54c8abb70c95fbc926980
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_fb2246a29f2c487793b4c80690ebd0ad
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_a060aa69c19a436eb6a14f3a6d2b8d39
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador/0bd8fd0b-731f-40d7-a44b-83c4f4f905f3
+        name: Delete
+        meta:
+          id: req_c9bd36d5165640c3b9ba56de7ed450f5
+          created: 1763727355833
+          modified: 1763928778475
+          isPrivate: false
+          sortKey: -1762726334744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_e5108c4e473d4ad79ddee6b53dc6fc0e
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_71d1f2c4f4a244c39ae5500d666b1aa5
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador/equipe/3dee999f-fae0-47a2-86d2-628bb93b6870
+        name: Get Operadores Equipe
+        meta:
+          id: req_2d2f90e3392049c29bfd83c32d4b9db7
+          created: 1763727705987
+          modified: 1763928404723
+          isPrivate: false
+          sortKey: -1763727705987
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+            id: pair_eba88a9ef3ae4ecf9e18f3da6f0cac10
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_a6a5c0a1436f456987e302958399f51a',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+            id: pair_7b8cc2243ab94910a5f1b54f536880f7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Setor
+    meta:
+      id: fld_128c986d18af4188aa295d61561e5d4c
+      created: 1763728896442
+      modified: 1763728896442
+      sortKey: -1760152268781.25
+    children:
+      - url: http://localhost:8080/setor/000d68d5-6ab7-46a8-aa08-d24510dfe954
+        name: Get ID Setor
+        meta:
+          id: req_011c82d0269c47fdb72980cdbc360bab
+          created: 1763728896443
+          modified: 1763928269418
+          isPrivate: false
+          sortKey: -1762726243945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/setor/000d68d5-6ab7-46a8-aa08-d24510dfe954
+        name: Patch
+        meta:
+          id: req_17160bd0f1774d9ba17136e8f39e568a
+          created: 1763728896443
+          modified: 1763928280916
+          isPrivate: false
+          sortKey: -1762726112088
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "descricao": "canteiro frontal atualizado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/setor
+        name: Get all
+        meta:
+          id: req_ef1ddfcc5a4d47bf85091aecb80f6c28
+          created: 1763728896444
+          modified: 1763924113503
+          isPrivate: false
+          sortKey: -1762726157261
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/setor
+        name: Update
+        meta:
+          id: req_a8aed69cdbdf44408e329d00e0376f72
+          created: 1763728896445
+          modified: 1763928245618
+          isPrivate: false
+          sortKey: -1762726293941
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "000d68d5-6ab7-46a8-aa08-d24510dfe954",
+              "nome": "Elétrica",
+              "descricao": "setor de instalação elétrica"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/setor/000d68d5-6ab7-46a8-aa08-d24510dfe954
+        name: Delete
+        meta:
+          id: req_c3eed87f2d384d6584f5e6f98cd3ff4d
+          created: 1763728896446
+          modified: 1763928805263
+          isPrivate: false
+          sortKey: -1762726334744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/setor
+        name: Create
+        meta:
+          id: req_d5a0fe94f39d4476974f4f53ff0abf1b
+          created: 1763728896446
+          modified: 1763924100892
+          isPrivate: false
+          sortKey: -1762726323042
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Canteiro de obras",
+              "descricao": "canteiro frontal"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Camera
+    meta:
+      id: fld_1078450aef9f46fabd79a04f55a48812
+      created: 1763732743129
+      modified: 1763927229063
+      sortKey: -1759707691097.8125
+    children:
+      - url: http://localhost:8080/camera/2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016
+        name: Patch
+        meta:
+          id: req_a64ac647ec584ba49ab379224ecf7333
+          created: 1763732743130
+          modified: 1763928499609
+          isPrivate: false
+          sortKey: -1762726112088
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "localizacao": "Canteiro A4"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera/2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016
+        name: Get ID Camera
+        meta:
+          id: req_31b410a8a31945b1891918d8c99cff67
+          created: 1763732743131
+          modified: 1763928486204
+          isPrivate: false
+          sortKey: -1762726243945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera
+        name: Update
+        meta:
+          id: req_c7afc8e89b7d453aa6c32b42783b4759
+          created: 1763732743132
+          modified: 1763928469520
+          isPrivate: false
+          sortKey: -1762726293941
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016",
+              "localizacao": "Teto lado Central",
+              "descricao": "Camera VOIP",
+            	"status": "INATIVO",
+            	"setorId": "000d68d5-6ab7-46a8-aa08-d24510dfe954"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera
+        name: Get all
+        meta:
+          id: req_cbfbbca04dc341a29b93d61ec9e9b0a2
+          created: 1763732743132
+          modified: 1763924200046
+          isPrivate: false
+          sortKey: -1762726202434
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera
+        name: Create
+        meta:
+          id: req_0085e8462d91471e9ef5073139dcf21e
+          created: 1763732743133
+          modified: 1763928433432
+          isPrivate: false
+          sortKey: -1762726323042
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "localizacao": "Teto lado Esquerdo",
+              "descricao": "Camera Intelbras",
+            	"status": "ATIVO",
+            	"setorId": "000d68d5-6ab7-46a8-aa08-d24510dfe954"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera/2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016
+        name: Delete
+        meta:
+          id: req_0548f260c89349bab88363bc3d85ded5
+          created: 1763732743134
+          modified: 1763928703451
+          isPrivate: false
+          sortKey: -1762726334744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera/setor/9d017n5c8-7ba6-4c40-9fcd-7af53aa7e49d
+        name: Get Cameras Setor
+        meta:
+          id: req_05ccf9d6f0ee4eeeb9f34a855d749630
+          created: 1763732743135
+          modified: 1763924176903
+          isPrivate: false
+          sortKey: -1763727705987
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/camera/status?page=0&qtdListada=10&direction=ASC&status=ATIVO
+        name: Page Camera Status
+        meta:
+          id: req_6f80115196514e59baed4d3d2d5ffe48
+          created: 1763733060151
+          modified: 1763928552533
+          isPrivate: false
+          sortKey: -1763733060151
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Alerta
+    meta:
+      id: fld_8a27aa43ef2c42f981213710272a9270
+      created: 1763737336369
+      modified: 1763737336369
+      sortKey: -1759618775561.125
+    children:
+      - url: http://localhost:8080/alerta/67662fd7-eb77-4803-8cfc-7904353bd366
+        name: Patch
+        meta:
+          id: req_2f2c7c2e8dba412095a468e1b512fa68
+          created: 1763737336369
+          modified: 1763928656151
+          isPrivate: false
+          sortKey: -1762726112088
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "motivo": "Falta de Luvas"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/operador/0bd8fd0b-731f-40d7-a44b-83c4f4f905f3
+        name: Get ID Operador
+        meta:
+          id: req_1414f6dc4b08411cab4192aa0a3977cf
+          created: 1763737336370
+          modified: 1763928639992
+          isPrivate: false
+          sortKey: -1762726243945
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta
+        name: Get all
+        meta:
+          id: req_d8b224c141624f8baf2cbfb196c0ba07
+          created: 1763737336371
+          modified: 1763924159048
+          isPrivate: false
+          sortKey: -1762726202434
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta
+        name: Update
+        meta:
+          id: req_0e0cd346ad3548bcb8e3d71b7c3eec77
+          created: 1763737336372
+          modified: 1763928618727
+          isPrivate: false
+          sortKey: -1762726293941
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": "67662fd7-eb77-4803-8cfc-7904353bd366",
+              "motivo": "Falta de Capacete",
+              "nivelAlerta": "Baixo",
+            	"operadorId": "0bd8fd0b-731f-40d7-a44b-83c4f4f905f3",
+            	"cameraId": "2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta/
+        name: Delete
+        meta:
+          id: req_35fd47e781cc4ae3a443663046c47cdd
+          created: 1763737336373
+          modified: 1763928680538
+          isPrivate: false
+          sortKey: -1762726334744
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta
+        name: Create
+        meta:
+          id: req_616338692dbd4c52964fbb68e290b81d
+          created: 1763737336373
+          modified: 1763928591564
+          isPrivate: false
+          sortKey: -1762726323042
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "motivo": "Falta de Capacete",
+              "nivelAlerta": "Medio",
+            	"operadorId": "0bd8fd0b-731f-40d7-a44b-83c4f4f905f3",
+            	"cameraId": "2c4e9844-7a9a-4a55-8a2b-24bc5c0c9016"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        authentication:
+          type: none
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta/operador/e9410d5d-b562-4214-b074-8fdb960d82e6
+        name: Get Alertas Operador
+        meta:
+          id: req_13073d2dbee3422a8481c568fa2b746c
+          created: 1763737336374
+          modified: 1763924128193
+          isPrivate: false
+          sortKey: -1763727705987
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/alerta/setor/2d6cd985-efe1-406e-a366-ada7b0cebd67
+        name: Get Alertas Setor
+        meta:
+          id: req_c7b6785dc63b4a89b13c641fe9183e02
+          created: 1763737367168
+          modified: 1763924133159
+          isPrivate: false
+          sortKey: -1763727518635
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+          - name: Authorization
+            value: Bearer {% response 'body', 'req_7e7106ba94024184aa266534c6906576',
+              'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'when-expired', 60 %}
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - url: http://localhost:8080/auth
+    name: AcessToken
+    meta:
+      id: req_a6a5c0a1436f456987e302958399f51a
+      created: 1763650625518
+      modified: 1763734923264
+      isPrivate: false
+      sortKey: -1763727331283
+    method: POST
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    authentication:
+      type: basic
+      useISO88591: false
+      username: arthur@gmail.com
+      password: senha123
+      disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_8905fca10de64b088fbb83f4184db3fa
+    created: 1763641719081
+    modified: 1763923242795
+  cookies:
+    - id: 62801f42-1d48-40a6-ad79-da7bc32e9b1e
+      key: JSESSIONID
+      value: 89F335175D8B1AF601526FDD91B2655D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_389ae3f05f2143b3bb6818c62a37888e
+    created: 1763641719080
+    modified: 1763919865639
+    isPrivate: false
+  data:
+    "":
+      auth:
+        accessToken: SEU_TOKEN_AQUI
