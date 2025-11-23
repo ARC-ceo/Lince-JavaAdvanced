@@ -1,7 +1,26 @@
-![Logo](banner.jpg)
-# SolarMetrics - API em Spring Boot
+![Logo](logo.png)
+# Lince - API em Spring Boot
 
-**SolarMetrics** é uma API desenvolvida para monitoramento e análise de energia solar, fornecendo dados em tempo real sobre sensores, usuários e ocupação de sistemas. A aplicação permite integrar sensores IoT, gerar relatórios e fornecer dados para aplicativos móveis ou dashboards web.
+O **Lince** é um sistema completo para **monitoramento, análise e gestão
+de EPIs** (Equipamentos de Proteção Individual), integrando dados em
+tempo real de sensores instalados em estações e ambientes operacionais.\
+A plataforma permite acompanhar uso, conformidade, alertas de segurança
+e comportamento operacional, garantindo maior proteção para
+colaboradores e maior controle para equipes de supervisão e segurança.
+
+Nosso objetivo é oferecer uma solução moderna e confiável para
+**monitoramento inteligente de EPIs**, reduzindo riscos, prevenindo
+acidentes e centralizando informações essenciais para os times de
+segurança corporativa.
+
+## Problemas que a aplicação resolve
+-   Falta de visibilidade sobre **uso correto** de EPIs.
+-   Dificuldade em monitorar automaticamente **violação de áreas
+    restritas**.
+-   Baixa eficiência em auditorias e checklists de segurança.
+-   Falta de relatórios centralizados para tomada de decisão.
+-   Integração limitada entre sensores físicos e aplicações
+    administrativas.
 
 ## Sobre o time
 
@@ -12,7 +31,7 @@
 ## Como rodar a aplicação
 
 ### Pré-requisitos
-- Java 17 ou superior  
+- Java 21 ou superior  
 - Maven 3.8+  
 - IDE recomendada: IntelliJ IDEA ou VSCode  
 
@@ -26,7 +45,7 @@ A aplicação possui dois **profiles** de configuração de banco de dados:
 
 1. Clone o repositório:  
 ```bash
-git clone https://github.com/ARC-ceo/SolarMetrics-JavaAdvanced.git
+git clone https://github.com/ARC-ceo/Lince-JavaAdvanced.git
 ```
 
 2. Execute a aplicação com o profile desejado:
@@ -47,14 +66,6 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 A documentação dos endpoints está disponível via **Swagger UI**:  
 `http://localhost:8080/swagger-ui/index.html`
 
-## Diagramas
-
-### Diagrama de Classes
-![Diagrama de classes](diagram_classes.jpg)
-
-### Modelo Físico
-![Arquitetura](MER.png)
-
 ## Apresentação
 Assista ao vídeo explicando a proposta tecnológica, o público-alvo e os problemas que a aplicação resolve:  
 [Apresentação SolarMetrics](https://youtu.be/Fcza8JBvsyw)
@@ -69,19 +80,18 @@ A API foi documentada com **Swagger / OpenAPI**, oferecendo exemplos completos d
 
 ### Endpoints principais
 
-| Método | Endpoint                  | Descrição                                   |
-|--------|---------------------------|--------------------------------------------|
-| GET    | /cliente             | Listar todos clientes cadastrados        |
-| PUT    | /cliente        | Atualizar cadastro do cliente |
-| POST   | /cliente            | Criar cadastro do cliente                     |
-| GET    | /cliente/{id}        | Buscar cadastro do cliente                 |
-| DELETE | /cliente/{id}        | Deletar cadastro do cliente                             |
-| PATCH    | /cliente/{id}              | Atualiza o campo desejado do cliente          |
+| Método | Endpoint       | Descrição                                    |
+|--------|----------------|---------------------------------------------|
+| GET    | /supervisor       | Listar todos supervisores cadastrados       |
+| PUT    | /supervisor       | Atualizar cadastro do supervisor            |
+| POST   | /supervisor       | Criar cadastro de supervisor                |
+| GET    | /supervisor/{id}  | Buscar cadastro do supervisor               |
+| DELETE | /supervisor/{id}  | Deletar cadastro do supervisor              |
 
-> Para todos os endpoints, exemplos detalhados de request e response estão disponíveis no **Swagger UI**.
+> Para todos os endpoints, exemplos detalhados de request e response estão disponíveis no **Swagger UI** e **Collection para o Insomnia** presente aqui no repositório.
 
 ## Tecnologias utilizadas
-- Java 17  
+- Java 21  
 - Spring Boot 3.x  
 - Spring Data JPA  
 - Hibernate  
@@ -91,4 +101,4 @@ A API foi documentada com **Swagger / OpenAPI**, oferecendo exemplos completos d
 
 ---
 
-**SolarMetrics** — Sua energia. Seu controle  ☀️
+**Lince** — Visão total. Risco mínimo. 🦁
