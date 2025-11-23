@@ -58,13 +58,22 @@ public class SupervisorService implements SupervisorServiceInterface {
 
     public Supervisor update(Supervisor supervisor) {
         getId(supervisor.getId());
+        Equipe equipe = null;
         if (supervisor.getEquipe() != null && supervisor.getEquipe().getId() != null) {
             getEquipe(supervisor.getEquipe().getId());
+            equipe = Equipe.builder().id(supervisor.getEquipe().getId()).build();
         }
         if (supervisorRepository.findByEmail(supervisor.getEmail()).filter(c -> !c.getId().equals(supervisor.getId())).isPresent()) {
             throw new IllegalArgumentException("O e-mail já está em uso.");
         }
-        return supervisorRepository.save(supervisor);
+        Supervisor supervisorAtualizado = Supervisor.builder()
+                .id(supervisor.getId())
+                .nome(supervisor.getNome())
+                .email(supervisor.getEmail())
+                .telefone(supervisor.getTelefone())
+                .equipe(equipe)
+                .build();
+        return supervisorRepository.save(supervisorAtualizado);
     }
 
     public Supervisor getId(String id) {
