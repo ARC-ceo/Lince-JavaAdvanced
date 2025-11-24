@@ -70,7 +70,7 @@ Além disso, disponibilizamos no repositório uma **collection do Insomnia** con
 
 ## Apresentação
 Assista ao vídeo explicando a proposta tecnológica, o público-alvo e os problemas que a aplicação resolve:  
-[Apresentação SolarMetrics](https://youtu.be/Fcza8JBvsyw)
+[Apresentação SolarMetrics](https://mega.nz/file/wuowCKCI#9oVsDlWlh2ehUqFIBXNfO8108JufTlr685RoGP4-sBk)
 
 ## Video demonstrativo
 Assista ao vídeo para a demonstração e teste da API na prática:  
